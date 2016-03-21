@@ -1,0 +1,59 @@
+scratch work from the tex doc lives here
+
+
+\section{Crash course in dynamical systems theory}
+This section may not be necessary/ may be able to reduce to a stub.
+
+\subsection{Qualitative dynamics}
+
+Attractors: stable/unstable fixed points, limit cycles, chaos
+
+
+\section{Knots on Manifolds}
+
+Fuck this is a whole thing - maybe restrict to dynamical systems on $\R^n$?
+
+
+\section{Meaures of complexity}
+
+Is it true that complicated dynamics give to rise to complicated knots, and simple dynamics give rise to simple knots? Sounds plausible, and is true with the proper formulation.
+The measure of complexity for dynamical system we will use is topological entropy. Topological entropy essentially measures the growth rate of periodic orbits under increasing resolution.
+
+\begin{definition}[Zero-entropy knots]
+  The class of all knots generated from unknots via the operations of cabling and connected sums.
+\end{definition}
+
+
+\begin{thm}[Franks and Williams, 1985]
+  If a $C^2$ smooth flow on $S^3$ (or $\R^3$) has positive topological entropy, then the link of periodic oribts is infinite and contains an infinite number of distinct knot types as components
+\end{thm}
+
+Ghrist remarks that it follows from the proof that any such flow must contain infintely many knots which are not in the class of zero-entropy knots, and that there must be knotted orbits of arbitrarily long length. An interesting
+question is what is the behavior of such `asymptotically wild' knots on a compact manifold?
+
+
+
+\subsection{Questions from this section}
+\begin{itemize}
+\item How `small' or `large' can this link be?
+\item Does the existence of one type of knot force the coexistence of another?
+\item \emph{Really} stupid question: can a flow with no limit cycles have a non-empty link of closed orbits? Definitionally it seems the answer is no, but Ghrist asks if its possible to create a finite link as the set of
+closed oribts of a flow with no fixed points, which is confusing.
+\item Does every chaotic system have positive topolgical entropy? Converse? Is chaotic system even well-defined?
+\end{itemize}
+
+
+\section{General Questions}
+
+\begin{itemize}
+    \item Can non-chaotic dynamical systems have knotted orbits? Yes, you can trivially construct a dynamical system having any knot $K$ as a limit cycle.
+    \item Follow up question: can non-chaotic dynamical systems be universal? I doubt it
+    \item Classification theorems for universality? That is, when does a dynamical system contain all knots as orbits.
+    \item What is meant by `perhaps infinite' link in the definition of link of closed orbits? Wild link?
+    \item Why does Ghrist seem to mostly only consider flows on $S^3$? Maybe because we are considering the periodic solutions to third order systems (which have 3-D solution space)
+\end{itemize}
+
+
+\begin{definition}[Link of closed orbits]
+  Given a flow $\phi_t$ on a three-manifold $M$, the \emph{link of closed orbits} $L_\phi$ is defined to be the set of closed (periodic) oribts of $\phi_t$, considered as a (perhaps infinite) link in $M$
+\end{definition}
