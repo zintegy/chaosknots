@@ -159,3 +159,5 @@ pythontex-files-*/
 TSWLatexianTemp*
 
 paper.pdf
+#*.tex#
+.#*.tex#
