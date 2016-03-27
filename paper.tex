@@ -1,5 +1,6 @@
  \documentclass[11pt]{article}
 
+ \usepackage{subfiles}
  \usepackage{amsmath}
  \usepackage{amsxtra}
  \usepackage{amsfonts}
@@ -68,80 +69,19 @@
 
 \tableofcontents
 
-%%start here
+\subfile{intro.tex}
 
-\section{Introduction and background}
+\subfile{body.tex}
 
-Initial exposition on the connection between dynamical systems theory and knot theory. The set of links.
-
-\subsection{Templates}
-
-Motivate: collapse out along stable manifolds
-
-
-\begin{definition}
-  Given a template $\tau$, we define
-  \begin{itemize}
-    \item Branch lines  $\set{l_j : j = 1, \cdots M}$
-    \item Strips $\set{x_i : i = 1, \cdots N \geq 2 M}$
-    \item Itinerary space $\Sigma_\tau = \set{a_0 a_1 a_2 \cdots} \subset \set{x_1, x_2, \ldots, x_N}^{\Z^+}$
-    \item Transition matrix
-
-      \begin{equation}
-        A_\tau(i,j) = \left.\{ \
-        \begin{smallmatrix}
-          0: \not\exists \text{ a strip from } x_i \text{ to } x_j \\
-          1: \exists \text{ a strip from } x_i \text{ to } x_j
-        \end{smallmatrix}
-      \end{equation}
-  \end{itemize}
-\end{definition}
-
-Note that powers of $A_\tau$ capture allowable trajectories. (Can we expand this into saying anything interesting?)
-
-Put short exposition on ordering $\vartriangleright$ of orbits
-
-
-\subsection{Template renormalization}
-Template renormalization exposition goes here. This should be done very carefully and in much greater detail than given in Ghrist, I think
-
-\subsection{Mexico}
-(What happens when you leave your computer unattended\dots)
-mad max
-hardcore henry
-klean kanteen katie
-burrito berger
-
-\subsection{Braids}
-
-\subsection{Link of knots}
-
-\subsection{Renormalization}
-
-\section{Outline of proof that $\mathcal{V}$ is a universal template}
-
-\subsection{Braids and the theorem of Alexander}
-
-Every link is isotopic to some closed braid on $P$ strands for some $P$. Cite the proper paper
-
-\subsection{The templates $\W_q$}
-
-An isotopic copy of any closed braid exists as a set of periodic oribts on some $W_q$ for sufficently large $q$.
-
-\subsection{Construct $\W_{q+1}$ from $\W_q$}
-
-Start with renormalized $\W_1 \in \V$, and append a pair of ears to\dots
-
-\subsection{Find $\W_q \subset \V$ for all $q$}
-
-This is very tricky and will have to be very loosely sketched
+\subfile{conclusion.tex}
 
 
 
 
-\section{Miscelaneous discussions and interesting open questions}
-
-
+\bibliographystyle{unsrt}
+%most convenient for citation management to keep them out of the working directory
+% message me and i'll share the citation file with you
+\bibliography{~/research/citations/knot_theory.bib}
 
 
 \end{document}

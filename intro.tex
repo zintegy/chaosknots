@@ -1,0 +1,55 @@
+\documentclass[report.tex]{subfiles}
+
+\section{Introduction and background}
+
+This report is heavily based on Robert Ghrist's \emph{An ODE whose solutions contain all knots and links} \cite{knottyode}. In that manuscript, Ghrist gives an excellent high-level exposition of a proof that an ODE containing
+all knots and links as periodic orbits exists, building heavily off of his existing work in this area. His manuscript is chock full of interesting side notes; the connection between knot theory and dynamical systems is so rich
+that it's difficult to not get distracted by the
+
+Rather than pointlessly recapitulate what Ghrist has already stated so elegantly, we seek to give a more compact and self-contained exposition of the beautiful proof that the required ODE exists. The reader is encouraged to
+refer to Ghrist's review papers \cite{knottyode}\cite{chaoticknots}to see many many interesting footnotes and connections that will not make it into this work.
+
+We will inevitably be unable to resist the temptation to discuss at least a few interesting connections and questions. The last section of this manuscript is reserved for discussion of those distractions that most fascinate the
+authors during the writing.
+
+As briefly stated above, our ultimate goal is to prove the existence of a universal ODE, an ODE whose periodic solutions contain all knots and links.
+
+
+\subsection{Templates}
+
+The story begins with \emph{templates}, a beautiful and very powerful construction. It would be very difficult to prove the existence of a universal ODE
+
+Motivate: collapse out along stable manifolds
+
+
+\begin{definition}
+  Given a template $\tau$, we define
+  \begin{itemize}
+    \item Branch lines  $\set{l_j : j = 1, \cdots M}$
+    \item Strips $\set{x_i : i = 1, \cdots N \geq 2 M}$
+    \item Itinerary space $\Sigma_\tau = \set{a_0 a_1 a_2 \cdots} \subset \set{x_1, x_2, \ldots, x_N}^{\Z^+}$
+    \item Transition matrix
+
+      \begin{equation}
+        A_\tau(i,j) = \left.\{ \
+        \begin{smallmatrix}
+          0: \not\exists \text{ a strip from } x_i \text{ to } x_j \\
+          1: \exists \text{ a strip from } x_i \text{ to } x_j
+        \end{smallmatrix}
+      \end{equation}
+  \end{itemize}
+\end{definition}
+
+Note that powers of $A_\tau$ capture allowable trajectories. (Can we expand this into saying anything interesting?)
+
+Put short exposition on ordering $\vartriangleright$ of orbits
+
+
+\subsection{Template renormalization}
+Template renormalization exposition goes here. This should be done very carefully and in much greater detail than given in Ghrist, I think
+
+\subsection{Braids}
+
+\subsection{Link of knots}
+
+\subsection{Renormalization}
