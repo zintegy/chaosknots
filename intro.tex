@@ -60,7 +60,7 @@ many components, although we will see later that the Lorenz system is not univer
 The primary formal advantage of working with templates, is that they allow the use of \emph{symbolic dynamics}. We can identify periodic orbits on a template $\tau$ with the sequence of strips crossed.
 
 \begin{definition}
-  Given a template $\tau$, we define
+  Following~\cite{knottyode}, given a template $\tau$, we define
   \begin{itemize}
     \item Branch lines  $\set{l_j : j = 1, \cdots M}$, the one-dimensional lines strips are connected along
     \item Strips $\set{x_i : i = 1, \cdots N \geq 2 M}$, the two-dimensional regions connecting branch lines
@@ -71,17 +71,34 @@ The primary formal advantage of working with templates, is that they allow the u
       \begin{equation}
         A_\tau(i,j) = \left\{ \
         \begin{smallmatrix}
-          0: \not\exists \text{ a strip from } x_i \text{ to } x_j \\
-          1: \exists \text{ a strip from } x_i \text{ to } x_j
+          0 \text{ if } \not\exists \text{ a strip from } x_i \text{ to } x_j \\
+          1 \text{ if } \exists \text{ a strip from } x_i \text{ to } x_j
         \end{smallmatrix}
         \right.
       \end{equation}
   \end{itemize}
 \end{definition}
 
-Note that powers of $A_\tau$ capture allowable trajectories. (Can we expand this into saying anything interesting?)
+It's interesting to note that powers of $A_\tau$ capture allowable trajectories, or more precisely the $(i,j)$th element of the $k$th power of $A_\tau$ will be $1$ iff there is an orbit of $\tau$ of length $k$.
+So in principle we have succeeded in reducing questions about the periodic orbits of a flow to questions about powers of a single matrix. Of course, in practice it will be very difficult to compute $A$ from an arbitrary
+dynamical system.
+
+See the Figure~\ref{fig:universal} for an example of a template with labeled strips.
+
+Ghrist confirms that the set of admissable sequences on $\sigma_\tau$ corresponds exactly with the set of periodic orbits on $\tau$, as desired.
+
 
 Put short exposition on ordering $\vartriangleright$ of orbits
+
+
+
+\begin{figure}[h]
+  % not sure where to put this, but not here
+  \centering
+  \includegraphics[width=0.5\textwidth]{universal}
+  \caption{The universal template, reproduced from~\cite{knottyode}}\label{fig:universal}
+\end{figure}
+
 
 
 \subsection{Template renormalization}
