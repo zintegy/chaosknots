@@ -4,7 +4,8 @@
 
 \section{Introduction and background}
 
-This report is heavily based on Robert Ghrist's \emph{An ODE whose solutions contain all knots and links}~\cite{knottyode}. In that manuscript, Ghrist gives an excellent high-level exposition of a proof that an ODE containing
+This report is heavily based on Robert Ghrist's and Robert Holmes' \emph{An ODE whose solutions contain all knots and links}~\cite{knottyode}.
+ In that manuscript, Ghrist gives an excellent high-level exposition of a proof that an ODE containing
 all knots and links as periodic orbits exists, building heavily off of his existing work in this area. His manuscript is chock full of interesting side notes; the connection between knot theory and dynamical systems is so rich
 that it's difficult to not get distracted by the
 
@@ -88,17 +89,22 @@ See the Figure~\ref{fig:universal} for an example of a template with labeled str
 Ghrist confirms that the set of admissable sequences on $\sigma_\tau$ corresponds exactly with the set of periodic orbits on $\tau$, as desired.
 
 
-Put short exposition on ordering $\vartriangleright$ of orbits
+\subsection{Ordering orbits on templates}
 
+It's possible, and will prove useful, to put an order on orbits on $\tau$. This is accomplished by choosing an ordering on strips emanating from the same branch line and using the induced lexicographic ordering to
+order orbits.
 
+This is best illustrated with an example borrowed from~\cite{knottyode}. Let $\V$ be the template illustrated in Figure~\ref{fig:universal}, outfitted with a Markov partition of strips \set{x_1, x_2, x_3, x_4}.
+Choose an ordering $\vartriangleright$ on the branch lines:
 
-\begin{figure}[h]
-  % not sure where to put this, but not here
-  \centering
-  \includegraphics[width=0.5\textwidth]{universal}
-  \caption{The universal template, reproduced from~\cite{knottyode}}\label{fig:universal}
-\end{figure}
+\begin{align*}
+  l_1 &: x_1 \vartriangleright x_2 \\
+  l_2 &: x_3 \vartriangleright x_4
+\end{align*}
 
+Then a lexicographic ordering on $\sigma_\V$ gives an ordering of orbits. For example, $x_1^2 x_3 x_4 \cdots \vartriangleright x_1 x_2 x_3 x_4 \vartriangleright x_1 x_2 x_4 \cdots$.
+
+Although we have skirted over the details of this ordering here, rest assured that it is well-defined for all templates as confirmed in~\cite{Holmes1989}\cite{Holmes1985}\cite{knottyode}
 
 
 \subsection{Template renormalization}
