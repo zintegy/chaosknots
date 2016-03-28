@@ -4,6 +4,8 @@
 
 \section{Introduction and background}
 
+%once we're finished go back and say exactly how this ended up differing from a knotty ode
+
 This report is heavily based on Robert Ghrist's and Robert Holmes' \emph{An ODE whose solutions contain all knots and links}~\cite{knottyode}.
  In that manuscript, Ghrist gives an excellent high-level exposition of a proof that an ODE containing
 all knots and links as periodic orbits exists, building heavily off of his existing work in this area. His manuscript is chock full of interesting side notes; the connection between knot theory and dynamical systems is so rich
@@ -28,7 +30,7 @@ We do not discuss the intricacies of this construction, for details, see~\cite{b
 
 
 \begin{definition}[Template]
-  A \emph{template} is a compact branched two-manifold fitted with a smooth expansive semiflow and built from a finite number of \emph{joining} and \emph{splitting} charts, as in Figure~\ref{fig:joinsplit}~\cite{knottyode}.
+  A \emph{template} is a compact branched two-manifold fitted with a smooth expansive semiflow and built from a finite number of \emph{joining} and \emph{splitting} charts, as in Figure~\ref{fig:joinsplit}~\cite{knottyode}.\label{def:template}
 \end{definition}
 
 
@@ -51,12 +53,12 @@ Figure~\ref{fig:lorenz} shows the template for the familiar Lorenz system, the c
 templates - the Lorenz template exactly captures the repeated expanding and folding over of orbits that is the signature of chaos. For certain parameter values, periodic solutions to these equations form a link of infinitely
 many components, although we will see later that the Lorenz system is not universal.
 
-\begin{align*}
+\begin{align}
   \label{eq:lorenz}
   \dot{x} &= \sigma(y - x ) \\
   \dot{y} &= \beta x - y - x z \\
   \dot{z} &= - \beta z + x y
-\end{align*}
+\end{align}
 
 The primary formal advantage of working with templates, is that they allow the use of \emph{symbolic dynamics}. We can identify periodic orbits on a template $\tau$ with the sequence of strips crossed.
 
@@ -94,13 +96,13 @@ Ghrist confirms that the set of admissable sequences on $\sigma_\tau$ correspond
 It's possible, and will prove useful, to put an order on orbits on $\tau$. This is accomplished by choosing an ordering on strips emanating from the same branch line and using the induced lexicographic ordering to
 order orbits.
 
-This is best illustrated with an example borrowed from~\cite{knottyode}. Let $\V$ be the template illustrated in Figure~\ref{fig:universal}, outfitted with a Markov partition of strips \set{x_1, x_2, x_3, x_4}.
+This is best illustrated with an example borrowed from~\cite{knottyode}. Let $\V$ be the template illustrated in Figure~\ref{fig:universal}, outfitted with a Markov partition of strips $\set{x_1, x_2, x_3, x_4}$.
 Choose an ordering $\vartriangleright$ on the branch lines:
 
-\begin{align*}
+\begin{align}
   l_1 &: x_1 \vartriangleright x_2 \\
   l_2 &: x_3 \vartriangleright x_4
-\end{align*}
+\end{align}
 
 Then a lexicographic ordering on $\sigma_\V$ gives an ordering of orbits. For example, $x_1^2 x_3 x_4 \cdots \vartriangleright x_1 x_2 x_3 x_4 \vartriangleright x_1 x_2 x_4 \cdots$.
 
@@ -108,11 +110,52 @@ Although we have skirted over the details of this ordering here, rest assured th
 
 
 \subsection{Template renormalization}
-Template renormalization exposition goes here. This should be done very carefully and in much greater detail than given in Ghrist, I think
 
-\subsection{Braids}
+Our main tool in proving the existence of a universal template (and by extension a universal ODE) will be \emph{template renormalization}. The following definition are due to~\cite{knottyode}.
 
-\subsection{Link of knots}
 
-\subsection{Renormalization}
+% yitz mentioned we need to use a different definition?
+\begin{definition}[Subtemplate]
+  A \emph{subtemplate} $S \subset \tau$ of a template $\tau$ is a topological subset of $\tau$ which, with the restriction of the semiflow of $\tau$, satisfies the definition of a template (Definition~\ref{def:template})
+\end{definition}
+
+
+\begin{definition}[Template renormalization]
+  A  \emph{template renormalization} of a template $\tau$ is a map $\bm{R} : \tau \to \tau$ taking orbits to orbits which is a diffeomorphism onto its image.
+  The image of a template renormalization is by definition a subtemplate.
+\end{definition}
+
+See Figure~\ref{fig:lorenz_subtemplate} for a helpful illustration of how a renormalization might be constructed.
+
+Note that if a template $\tau$ admits a renormalization, then the image of that renormalization (being diffeormophic to the original template) can again be renormalized, giving an increasingly complicated sequenced of embedded
+subtemplates each diffeormorphic to the original! This is the essential property that makes renormalizations such a powerful tool in proving the existence of a universal ODE, a bit later
+we will see exactly how its usefulness is manifest.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\textwidth]{lorenz_subtemplate.png}
+  \caption{A subtemplate of the Lorenz subtemplate $\L$. When it is cut along the boundary and removed from $\L$, it forms a template diffeomorphic to the original one! Figure reproduced from~\cite{knottyode}}\label{fig:lorenz_subtemplate}
+\end{figure}
+
+A \emph{very} useful lemma proved in~\cite{knottyode} follows
+
+
+\begin{lemma}[Ghrist \& Holmes 1993]
+  A template renormalization $\bm{R}: \tau \to \tau$ induces a map $\bm{R}: \sigma_\tau \to \sigma_\tau$ whose action is to inflate each element of the Markov partition of strips $\set{x_i : i = 1\cdots N}$ to a finite
+  admissable word $\set{\bm{w_i} = w_1 w_2 \cdots w_{n(i)} : i = 1 \cdots N, w_i \in \set{x_i}}$
+\end{lemma}
+
+For example the renormalization $\bm{L} : \L \to \L$ shown in Figure~\ref{fig:lorenz_subtemplate} has the following action on the set of strips:
+
+\begin{equation}
+  \bm{L} : \L \to \L \left\{ \begin{smallmatrix} x_1 \mapsto x_1 \\ x_2 \mapsto x_1 x_2 \end{smallmatrix}\right.
+\end{equation}
+
+Renormalizations take knots to knots but will typically change the knot type. We identify a special class of renormalizations that preserve knot type, as these are the renormalizations that we're really after.
+
+
+\begin{definition}{Isotopic renormalization}
+  An \emph{isotopic renormalization} of an embedded template $\tau$ is a template renormalization $\bm{R}$ such that $\bm{R}(\tau)$ is isotopic to $tau$
+\end{definition}
+
 \end{document}
