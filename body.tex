@@ -96,7 +96,7 @@ two \emph{ears} to one side. The property that successive ears alternate in `sig
 
     For the braid group $B_{n+1}$, notice that for all $1 \leq i \leq n$, $\pi_i$ can be drawn on any positive ear of $\W_q$, letting all but the bottom strand take the top strip and forcing the bottom strand to take the bottom strip, cross over exactly $i$ strands, and take the top strip. Similarly, for all $i \leq i \leq n$, $\pi_i'$ can be drawn on any negative ear of $W_q$, letting all but the bottom strand take the top strip, forcing the bottom strand to take the bottom strip, cross under exactly $i$ strands, and take the top strip. Examples of $\pi_2$ and $\pi_2'$ of the braid group $\B_5$ are drawn in Figure~\ref{fig:earexchange}. 
 
-    Because this set of elements generates the braid group $B_{n+1}$, any braid $B \in B_{n+1}$ can be drawn as a sequence of $\pi_i$ and $\pi_i'$. If $B$ can be represented with $m$ of these elements, then $B$ lies in $W_m$, as $W_m$ contains $m$ pairs of positive/negative ears that can each support a $\pi_i$ or $\pi_i'$ structure. Thus, any braid on $N$ strands lies in $W_q$ for sufficiently large $q$. 
+    Because this set of elements generates the braid group $B_{n+1}$, any braid $B \in B_{n+1}$ can be drawn as a sequence of $\pi_i$ and $\pi_i'$. If $B$ can be represented with $m$ of these elements, then the closure of $B$ lies in $W_m$, as $W_m$ contains $m$ pairs of positive/negative ears that can each support a $\pi_i$ or $\pi_i'$ structure. Thus, any closed braid on $N$ strands lies in $W_q$ for sufficiently large $q$. 
 
 \end{proof}
 
@@ -105,7 +105,7 @@ two \emph{ears} to one side. The property that successive ears alternate in `sig
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.8\textwidth]{ear_exchange.png}
-  \caption{Fitting a generating set for $S_n$ on the ears of $\W_q$. Figure reproduced from~\cite{Ghrist1996}}\label{fig:earexchange}
+  \caption{Top: $\pi_2$ in $B_5$ Bottom: $\pi_2'$ in $B_5$. Figure reproduced from~\cite{Ghrist1996}}\label{fig:earexchange}
 \end{figure}
 
 
@@ -119,9 +119,47 @@ Start with renormalized $\W_1 \in \V$, and append a pair of ears to\dots
 
 \subsection{Find $\W_q \subset \V$ for all $q$}
 
-This is very tricky and will have to be very loosely sketched
 
-This paper is referenced to prove this fact. (requires defining subtemplates; maybe that could be done in an earlier section)
-https://www.math.upenn.edu/~ghrist/preprints/eraams.pdf
+\begin{proof}
+    First, we must map $\V$ into itself in such a way that avoids certain edges; see the left diagram of Figure~\ref{fig:appendToV}. After appending the appropriate ears, we send $\V$ back into itself to allow ourselves to iterate this procedure. 
+
+    We start with $\W_1 = \V$ and append two ears (one positive and one negative) to $\W_1$ to get $\W_2$; using the procedure above, we can show that $\W_2 \subset \V$. This can be iterated infinitely many times to show that $\W_q \submset \V$ for all $q$. 
+\end{proof}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{appendToV.png}
+    \caption{Appending a positive ear to $T$ (left) yields $T^+$ (right). Figure reproduced from} \label{fig:appendToV} %%%%%%%%%%%%%%%%%%%%% link below. 
+\end{figure}
+
+
+
+%https://www.math.upenn.edu/~ghrist/preprints/eraams.pdf
+
+\subsection{Universal Templates and V}
+
+\begin{theorem}[Ghrist 1995]
+    The template $\V$ contains an isotopic copy of every tame knot and link as a periodic orbit of the semiflow. 
+\end{theorem}
+\begin{proof}
+    This proof comes immediately following the fact that $\W_q \subset \V$ for all $q$, and that all closed braids (and thus all tame links and knots) can be contained within $\W_q$ for large enough $q$. Thus, $\V$ contains every tame knot and link. 
+\end{proof}
+
+
+Ghrist then extends the theorem above to prove the following: 
+
+\begin{theorem}[Ghrist 1995] 
+    The template $\V$ contains all orientable templates as subtemplates of $\V$. 
+\end{theorem}
+
+It must follow that if there are any other universal templates $T$, then $\V$ must contain $T$ as a subtemplate. As $T$ contains all tame links and knots as well, as it is universal, the same theorems can be applied to $T$ as were applied to $\V$, so that $T$ also contains all templates (including $\V$. 
+
+
+
+
+
+
+
+
 
 \end{document}
