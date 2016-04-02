@@ -128,32 +128,27 @@ As proof of their isotopy, diagrams showing the inflation are given.
 \end{figure}
 
 
+In addition, we can consider the following inflation: $$\chi: \begin{matrix} U \rightarrow U \\ \V \rightarrow \V \end{matrix} \begin{cases} x_1 \rightarrow x_3 \\ x_2 \rightarrow x_4 \\ x_3 \rightarrow x_1 \\ x_4 \rightarrow x_2 \end{cases}$$
 
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.8\textwidth]{inflationG.png}
-  \caption{Top: $\pi_2$ in $B_5$ Bottom: $\pi_2'$ in $B_5$. Figure reproduced from~\cite{Ghrist1996}}\label{fig:earexchange}
-\end{figure}
+    The purpose of this inflation is to switch the two branch lines. 
 
+    \begin{lemma}[ghrist1997knots]
+        Given an isotopic inflation $A$ having either $U$ or $\V$ as a domain and range (independently of each other), the inflation $A^* = \chi A \chi$ is also isotopic.  
+    \end{lemma}
 
+For example, given $F$ as defined above, $F^*$ is defined as $$F^*: U \hookrightarrow \V \begin{cases} x_1 \rightarrow x_2 x_4 \\ x_2 \rightarrow x_2 \\ x_3 \rightarrow x_3 \\ x_4 \rightarrow x_3 x_4 x_1 \end{cases}$$
 
-
-
-
-
-
-
-
-
+    Finally, in the next section, we can include the inflation $\mathfrak{H} = F^* G F G^*$ in the next section to continue our proof. 
 
 
 \subsection{Find $\W_q \subset \V$ for all $q$}
 
-\begin{proof}
-    % less handwavy? Still somewhat, but less so. 
+We must start with a lemma, provided by Ghrist.
+\begin{Lemma}[ghrist1997knots]
     Given that a subtemplate of $\V$ doesn't contain $x_1^\infty$, it is possible to add an ear near the top branch line, like that in Figure~\ref{fig:appendToV}, which is a positive ear. Similarly, given that a subtemplate of $\V$ doesn't contain $X_3^\infty$, it is possible to add an ear near the bottom branch line, which is a negative ear. 
+\end{Lemma}
 
-    Let us begin with $\W_1 = \V$. We introduce an inflation from $\V$ onto $\V$: 
+Let us begin with $\W_1 = \V$. We perform the inflation $\mathfrak{H}$: 
     $$\mathfrak{H}: \V \hookrightarrow \V \begin{cases}
         x_1 \rightarrow x_2 x_3^2 x_4 x_1 (x_2 x_4)^2 x_2 x_3 x_4 x_1 \\
         x_2 \rightarrow x_2 x_3^2 x_4 x_1 (x_2 x_4)^3 x_2 x_3 x_4 x_1 \\
@@ -162,7 +157,7 @@ As proof of their isotopy, diagrams showing the inflation are given.
 
         This inflation satisfies the condition that this subtemplate does not contain $x_1^\infty$. Then, after performing this inflation, we will be able to add a positive ear at the top branch line; after doing so, we now have $\W_1^+$. 
 
-        There exists a very similar inflation $\mathfrak{H}^*$ from $\V$ onto $\V$ that will allow us to add a negative ear at the bottom branch ilne. Now, we have added a positive ear and a negative ear, so we are at $\W_2$, yet this subtemplate is still contained within $\V$; this implies that $\W_2 \subset \V$. Now, we can repeat this procedure, adding another positive and negative ear after the respective inflations to get $\W_3$. 
+        There exists a very similar inflation $\mathfrak{H}^*$ from $\V$ onto $\V$ that will allow us to add a negative ear at the bottom branch line. Now, we have added a positive ear and a negative ear, so we are at $\W_2$, yet this subtemplate is still contained within $\V$; this implies that $\W_2 \subset \V$. Now, we can repeat this procedure, adding another positive and negative ear after the respective inflations to get $\W_3$. 
 
         This procedure can be repeated $q$ times to show that $\W_q \subset \V$ for any positive $q$; thus, by induction, $\W_q \subset \V$ for all $q$. 
     \end{proof}
@@ -195,12 +190,6 @@ Ghrist then extends the theorem above to prove the following:
 \end{thm}
 
 It must follow that if there are any other universal templates $T$, then $\V$ must contain $T$ as a subtemplate. As $T$ contains all tame links and knots as well, as it is universal, the same theorems can be applied to $T$ as were applied to $\V$, so that $T$ also contains all templates (including $\V$). 
-
-
-
-
-
-
 
 
 
