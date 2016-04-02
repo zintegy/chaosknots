@@ -43,6 +43,10 @@ We do not discuss the intricacies of this construction, for details, see~\cite{b
 % how to get this to display?
 \footnotetext{Regrettably, without permission}
 
+
+
+
+
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.5\textwidth]{lorenz.png}
@@ -109,9 +113,9 @@ Then a lexicographic ordering on $\sigma_\V$ gives an ordering of orbits. For ex
 Although we have skirted over the details of this ordering here, rest assured that it is well-defined for all templates as confirmed in~\cite{Holmes1989}\cite{Holmes1985}\cite{knottyode}
 
 
-\subsection{Template renormalization}
+\subsection{Template inflation}
 
-Our main tool in proving the existence of a universal template (and by extension a universal ODE) will be \emph{template renormalization}. The following definition are due to~\cite{knottyode}.
+Our main tool in proving the existence of a universal template (and by extension a universal ODE) will be \emph{template inflation}. The following definition are due to~\cite{knottyode}.
 
 
 % yitz mentioned we need to use a different definition?
@@ -124,15 +128,17 @@ Our main tool in proving the existence of a universal template (and by extension
 \end{definition}
 
 
-\begin{definition}[Template renormalization]
-  A  \emph{template renormalization} of a template $\tau$ is a map $\bm{R} : \tau \to \tau$ taking orbits to orbits which is a diffeomorphism onto its image.
-  The image of a template renormalization is by definition a subtemplate.
+\begin{definition}[Template inflation]
+  A  \emph{template inflation} of a template $\tau$ is a map $\bm{R} : \tau \to \tau$ taking orbits to orbits which is a diffeomorphism onto its image.
+  The image of a template inflation is, by definition, a subtemplate.
 \end{definition}
 
-See Figure~\ref{fig:lorenz_subtemplate} for a helpful illustration of how a renormalization might be constructed.
+See Figure~\ref{fig:lorenz_subtemplate} for a helpful illustration of how an inflation might be constructed.
 
-Note that if a template $\tau$ admits a renormalization, then the image of that renormalization (being diffeormophic to the original template) can again be renormalized, giving an increasingly complicated sequence of embedded
-subtemplates each diffeormorphic to the original! This is the essential property that makes renormalizations such a powerful tool in proving the existence of a universal ODE, a bit later
+
+
+Note that if a template $\tau$ admits a inflation, then the image of that inflation (being diffeormophic to the original template) can again be inflated, giving an increasingly complicated sequenced of embedded
+subtemplates each diffeormorphic to the original! This is the essential property that makes inflations such a powerful tool in proving the existence of a universal ODE, a bit later
 we will see exactly how its usefulness is manifest.
 
 \begin{figure}[h]
@@ -145,21 +151,21 @@ A \emph{very} useful lemma proved in~\cite{knottyode} follows
 
 
 \begin{lemma}[Ghrist \& Holmes 1993]
-  A template renormalization $\bm{R}: \tau \to \tau$ induces a map $\bm{R}: \sigma_\tau \to \sigma_\tau$ whose action is to inflate each element of the Markov partition of strips $\set{x_i : i = 1\cdots N}$ to a finite
+  A template inflation $\bm{R}: \tau \to \rho$ induces a map $\bm{R}: \sigma_\tau \to \sigma_\rho$ whose action is to inflate each element of the Markov partition of strips $\set{x_i : i = 1\cdots N}$ to a finite
   admissible word $\set{\bm{w_i} = w_1 w_2 \cdots w_{n(i)} : i = 1 \cdots N, w_i \in \set{x_i}}$
 \end{lemma}
 
-For example the renormalization $\bm{L} : \L \to \L$ shown in Figure~\ref{fig:lorenz_subtemplate} has the following action on the set of strips:
+For example the inflation $\bm{L} : \L \to \L$ shown in Figure~\ref{fig:lorenz_subtemplate} has the following action on the set of strips:
 
 \begin{equation}
   \bm{L} : \L \to \L \left\{ \begin{matrix} & x_1 \mapsto x_1 \\ & x_2 \mapsto x_1 x_2 \end{matrix}\right.
 \end{equation}
 
-Renormalizations take knots to knots but will typically change the knot type. We identify a special class of renormalizations that preserve knot type, as these are the renormalizations that we're really after.
+Inflations take knots to knots but will typically change the knot type. We identify a special class of inflations that preserve knot type, as these are the inflations that we're really after.
 
 
-\begin{definition}{Isotopic renormalization}
-  An \emph{isotopic renormalization} of an embedded template $\tau$ is a template renormalization $\bm{R}$ such that $\bm{R}(\tau)$ is isotopic to $\tau$
+\begin{definition}{Isotopic inflation}
+  An \emph{isotopic inflation} of an embedded template $\tau$ is a template inflation $\bm{R}$ such that $\bm{R}(\tau)$ is isotopic to $\tau$
 \end{definition}
 
 \end{document}

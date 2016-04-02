@@ -12,14 +12,17 @@ The essential idea is to find a special set of templates which have a special pr
 can be realized as a braid, this immediately implies that $\V$ is universal. The last step of showing that the special braid-supporting templates can found in $\V$ is the most difficult by far and where we will have to do the
 most hand-waving. Nonetheless, we will try to capture the essence.
 
+Also important in this proof is the existence of the $\mathcal{U}$ template, pictured below. $U$ and $\V$ are essentially equivalent, but there is one minor difference, and $U$ is universal as well.
+
 \begin{figure}[h]
   % not sure where to put this, but not here
 
     %this doesn't seem like too bad of a spot; you mention figure 1 in the first paragraph of this section so it shouldn't be placed too far away from that paragraph
   \centering
-  \includegraphics[width=0.5\textwidth]{universal.png}
-  \caption{The universal template, reproduced from~\cite{knottyode}}\label{fig:universal}
+  \includegraphics[width=0.5\textwidth]{universalVU.png}
+  \caption{(a) The universal template $\V$ and (b) The universal template $U$, reproduced from~\cite{Ghrist 1997}}\label{fig:universal}
 \end{figure}
+
 
 \subsection{Braids and the theorem of Alexander}
 
@@ -91,28 +94,70 @@ two \emph{ears} to one side. The property that successive ears alternate in `sig
 
 
 
-\subsection{Construct $\W_{q+1}$ from $\W_q$}
+%\subsection{Construct $\W_{q+1}$ from $\W_q$}
 
-Start with renormalized $\W_1 \in \V$, and append a pair of ears to\dots
+%Start with renormalized $\W_1 \in \V$, and append a pair of ears to\dots
 
 % is this actually necessary?
 
+
+\subsection{Special Inflations: $F$ and $G$}
+
+In his proof, Ghrist uses a few special inflations, $F$ and $G$, and accompanies them with a proposition: 
+
+\begin{prop}
+    The following inflations are isotopic. 
+$$F: U \hookrightarrow \V \begin{cases} x_1 \rightarrow x_1 \\ x_2 \rightarrow x_1 x_2 x_3 \\ x_3 \rightarrow x_4 x_2 \\ x_4 \rightarrow x_4 \end{cases}$$
+
+$$G: \V \hookrightarrow U \begin{cases} x_1 \rightarrow x_1 \\ x_2 \rightarrow x_1 \\ x_3 \rightarrow x_2 x_4 \\ x_4 \rightarrow x_2 x_3 x_4 \end{cases}$$
+\end{prop}
+
+As proof of their isotopy, diagrams showing the inflation are given. 
+
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.8\textwidth]{inflationF.png}
+  \caption{Left to Right: A subtemplate of $\V$ as given by $F$, then cut along the boundary and removed from $\V$, simplified to show that it equals $U$. Figure reproduced from~\cite{Ghrist 1997}}\label{fig:isotopicF}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.8\textwidth]{inflationG.png}
+  \caption{Left to Right: A subtemplate of $U$ as given by $G$, then cut along the boundary and removed from $U$, simplified to show that it equals $\V$. Figure reproduced from~\cite{Ghrist 1997}}\label{fig:isotopicG}
+\end{figure}
+
+
+In addition, we can consider the following inflation: $$\chi: \begin{matrix} U \rightarrow U \\ \V \rightarrow \V \end{matrix} \begin{cases} x_1 \rightarrow x_3 \\ x_2 \rightarrow x_4 \\ x_3 \rightarrow x_1 \\ x_4 \rightarrow x_2 \end{cases}$$
+
+    The purpose of this inflation is to switch the two branch lines. 
+
+    \begin{lemma}[Ghrist 1997]
+        Given an isotopic inflation $A$ having either $U$ or $\V$ as a domain and range (independently of each other), the inflation $A^* = \chi A \chi$ is also isotopic.  
+    \end{lemma}
+
+For example, given $F$ as defined above, $F^*$ is defined as $$F^*: U \hookrightarrow \V \begin{cases} x_1 \rightarrow x_2 x_4 \\ x_2 \rightarrow x_2 \\ x_3 \rightarrow x_3 \\ x_4 \rightarrow x_3 x_4 x_1 \end{cases}$$
+
+    Finally, in the next section, we can include the inflation $\mathfrak{H} = F^* G F G^*$ in the next section to continue our proof. 
+
+
 \subsection{Find $\W_q \subset \V$ for all $q$}
 
-\begin{proof}
-    % less handwavy? Still somewhat, but less so. 
+We must start with a lemma, provided by Ghrist.
+\begin{lemma}[Ghrist 1997]
     Given that a subtemplate of $\V$ doesn't contain $x_1^\infty$, it is possible to add an ear near the top branch line, like that in Figure~\ref{fig:appendToV}, which is a positive ear. Similarly, given that a subtemplate of $\V$ doesn't contain $X_3^\infty$, it is possible to add an ear near the bottom branch line, which is a negative ear. 
+\end{lemma}
 
-    Let us begin with $\W_1 = \V$. We introduce an renormalization from $\V$ onto $\V$: 
+Let us begin with $\W_1 = \V$. We perform the inflation $\mathfrak{H}$: 
     $$\mathfrak{H}: \V \hookrightarrow \V \begin{cases}
         x_1 \rightarrow x_2 x_3^2 x_4 x_1 (x_2 x_4)^2 x_2 x_3 x_4 x_1 \\
         x_2 \rightarrow x_2 x_3^2 x_4 x_1 (x_2 x_4)^3 x_2 x_3 x_4 x_1 \\
         x_3 \rightarrow x_2 x_3^2 x_4 x_1  x_2 x_4  \\
         x_4 \rightarrow x_2 x_3^2 x_4 x_1  x_2 x_4  \end{cases} $$
 
-        This renormalization satisfies the condition that this subtemplate does not contain $x_1^\infty$. Then, after performing this renormalization, we will be able to add a positive ear at the top branch line; after doing so, we now have $\W_1^+$. 
+        This inflation satisfies the condition that this subtemplate does not contain $x_1^\infty$. Then, after performing this inflation, we will be able to add a positive ear at the top branch line; after doing so, we now have $\W_1^+$. 
 
-        There exists a very similar renormalization $\mathfrak{H}^*$ from $\V$ onto $\V$ that will allow us to add a negative ear at the bottom branch ilne. Now, we have added a positive ear and a negative ear, so we are at $\W_2$, yet this subtemplate is still contained within $\V$; this implies that $\W_2 \subset \V$. Now, we can repeat this procedure, adding another positive and negative ear after the respective renormalizations to get $\W_3$. 
+        There exists a very similar inflation $\mathfrak{H}^*$ from $\V$ onto $\V$ that will allow us to add a negative ear at the bottom branch line. Now, we have added a positive ear and a negative ear, so we are at $\W_2$, yet this subtemplate is still contained within $\V$; this implies that $\W_2 \subset \V$. Now, we can repeat this procedure, adding another positive and negative ear after the respective inflations to get $\W_3$. 
 
         This procedure can be repeated $q$ times to show that $\W_q \subset \V$ for any positive $q$; thus, by induction, $\W_q \subset \V$ for all $q$. 
     \end{proof}
@@ -121,7 +166,7 @@ Start with renormalized $\W_1 \in \V$, and append a pair of ears to\dots
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{appendToV.png}
-    \caption{Appending a positive ear to $T$ (left) yields $T^+$ (right). Figure reproduced from~\cite{Ghrist1995}} \label{fig:appendToV} %%%%%%%%%%%%%%%%%%%%% link below. 
+    \caption{Appending a positive ear to $T$ (left) yields $T^+$ (right). Figure reproduced from~\cite{Ghrist1996}} \label{fig:appendToV} %%%%%%%%%%%%%%%%%%%%% link below. 
 \end{figure}
 
 
@@ -130,7 +175,7 @@ Start with renormalized $\W_1 \in \V$, and append a pair of ears to\dots
 
 \subsection{Universal Templates and V}
 
-\begin{thm}[Ghrist 1995]
+\begin{thm}[Ghrist 1996]
     The template $\V$ contains an isotopic copy of every tame knot and link as a periodic orbit of the semiflow. 
 \end{thm}
 \begin{proof}
@@ -140,17 +185,11 @@ Start with renormalized $\W_1 \in \V$, and append a pair of ears to\dots
 
 Ghrist then extends the theorem above to prove the following: 
 
-\begin{thm}[Ghrist 1995] 
+\begin{thm}[Ghrist 1996] 
     The template $\V$ contains all orientable templates as subtemplates of $\V$. 
 \end{thm}
 
 It must follow that if there are any other universal templates $T$, then $\V$ must contain $T$ as a subtemplate. As $T$ contains all tame links and knots as well, as it is universal, the same theorems can be applied to $T$ as were applied to $\V$, so that $T$ also contains all templates (including $\V$). 
-
-
-
-
-
-
 
 
 
