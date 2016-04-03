@@ -42,7 +42,7 @@ between braids and links.
 
 \subsection{The templates $\W_q$}
 
-The family of templates $\set{\W_q}$ shown in figure~\ref{fig:w_q} are those referred to earlier as the braid-supporting templates. $\W_1$ is identically $\V$ and increasing $q$ by one has the effect of adding
+The family of templates $\set{\W_q}$ shown in Figure~\ref{fig:w_q} are those referred to earlier as the braid-supporting templates. $\W_1$ is identically $\V$ and increasing $q$ by one has the effect of adding
 two \emph{ears} of alternating `sign' to one side. The property that successive ears alternate in `sign' is what makes this family of templates so useful, as this property makes proving that they support all braids delightfully simple.
 
 \begin{figure}[h]
@@ -103,9 +103,10 @@ two \emph{ears} of alternating `sign' to one side. The property that successive 
 
 The remainder of the proof is to show with a careful sequence of isotopic renormalizations that $W_q$ is contained in $\V$ for all $q$. First we define the needed renormalizations.
 
-\subsubsection{Special Inflations: $F$ and $G$}
 
-In his proof, Ghrist uses a few special inflations, $F$ and $G$, and accompanies them with a proposition:
+\subsubsection{Special Inflations: $\mathcal{F}$ and $\mathcal{G}$}
+
+In his proof, Ghrist uses a few special inflations, $\mathcal{F}$ and $\mathcal{G}$, and accompanies them with a proposition:
 
 \begin{prop}
     The following inflations are isotopic.
@@ -121,13 +122,13 @@ because the subtemplate in that figure had a twist in a strip, but we can infer 
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.8\textwidth]{inflationF.png}
-  \caption{Left to Right: A subtemplate of $\V$ as given by $F$, then cut along the boundary and removed from $\V$, simplified to show that it equals $\mathcal{U}$. Figure reproduced from~\cite{ghs1997}}\label{fig:isotopicF}
+  \caption{This shows that $\mathcal{F}$ is isotopic by showing that an image of $\mathcal{F}$ is isotopic to $\mathcal{U}$. Figure reproduced from~\cite{ghs1997}}\label{fig:isotopicF}
 \end{figure}
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.8\textwidth]{inflationG.png}
-  \caption{Left to Right: A subtemplate of $\mathcal{U}$ as given by $G$, then cut along the boundary and removed from $\mathcal{U}$, simplified to show that it equals $\V$. Figure reproduced from~\cite{ghs1997}}\label{fig:isotopicG}
+  \caption{This shows that $\mathcal{G}$ is isotopic by showing that an image of $\mathcal{G}$ is isotopic to $\mathcal{V}$.  Figure reproduced from~\cite{ghs1997}}\label{fig:isotopicG}
 \end{figure}
 
 
@@ -143,6 +144,7 @@ Additionally, we will need the following (\emph{not} isotopic) inflation which t
       Reidemeister moves commute with the mirror operation. That is, if $K$ is a projection of a knot and $R$ is a Reidemeister move, then $R(K^\ast)  \cong  {(R(K))}^\ast$. So although $\chi$ does not commute with $A$ as far as the symbolic
       action the inflations have on orbits, their \emph{topological} actions commute. Hence, topologically, $A^\ast$ acts as $\chi^2 A$. $\chi^2$ is the identity so is obviously isotopic. Therefore $A^\ast$ is isotopic to $A$.
     \end{proof}
+
 
 
 The symbolic action of $F^\ast$ is easily computed. For example, given $F$ as defined above, $F^*$ is defined as $$F^*: U \hookrightarrow \V \begin{cases} x_1 \mapsto x_2 x_4 \\ x_2 \mapsto x_2 \\ x_3 \mapsto x_3 \\ x_4 \mapsto x_3 x_4 x_1 \end{cases}$$ Because $F$ is isotopic, we know that $F^*$ must be isotopic as well; in addition, $G^*$ is also isotopic.
@@ -161,13 +163,14 @@ Now, we prove that $\W_q \subset \V$ for all $q$.
 Let us begin with $\W_1 = \V$. Let us calculate the symbolic action of the inflation $\mathfrak{H}: \V \to \V$ defined as $F^* G F G^*$. This is accomplished with the aid of Lemma~\ref{lemma:symbolic} by successively expanding
 letters (strips) in the space of itinerary into the admissable words they are mapped into under the inflation.
 For instance, $G^\ast$ takes $x_1$ to $x_4 x_2$, which when composed with $F$'s action on the itineraries maps to $x_4 x_1 x_2 x_3$. Performing all of the composition in succession yields the full action:
+
     $$\mathfrak{H}: \V \hookrightarrow \V \begin{cases}
         x_1 \mapsto x_2 x_3^2 x_4 x_1 (x_2 x_4)^2 x_2 x_3 x_4 x_1 \\
         x_2 \mapsto x_2 x_3^2 x_4 x_1 (x_2 x_4)^3 x_2 x_3 x_4 x_1 \\
         x_3 \mapsto x_2 x_3^2 x_4 x_1  x_2 x_4  \\
         x_4 \mapsto x_2 x_3^2 x_4 x_1  x_2 x_4  \end{cases} $$
 
-        Note that $G^*$ is an isotopic inflation from $\V$ to $\mathcal{U}$, $F$ is an isotopic inflation from $\mathcal{U}$ to $\V$, $G$ is an isotopic inflation from $\V$ to $\mathcal{U}$, and that $F^*$ is an isotopic inflation from $\mathcal{U}$ to $\V$. It must follow that $\mathfrak{H}$ is an isotopic inflation from $V$ to $V$; in other words, an isotopic renormalization.
+        Note that $mathcal{G}^*$ is an isotopic inflation from $\V$ to $\mathcal{U}$, $\mathcal{F}$ is an isotopic inflation from $\mathcal{U}$ to $\V$, $\mathcal{G}$ is an isotopic inflation from $\V$ to $\mathcal{U}$, and that $mathcal{F}^*$ is an isotopic inflation from $\mathcal{U}$ to $\V$. It must follow that $\mathfrak{H}$ is an isotopic inflation from $V$ to $V$; in other words, an isotopic renormalization.
 
         This renormalization satisfies the condition that its image (which is a subtemplate of $\V$) does not contain $x_1^\infty$. So, after performing this renormalization, we will be able to add a positive ear at the top branch line
         yielding an object we refer to as $\W_1^+$. To obtain $\W_2$ from this, we must add the negative ear.
