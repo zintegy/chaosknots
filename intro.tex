@@ -89,7 +89,9 @@ The primary formal advantage of working with templates, is that they allow the u
   \end{itemize}
 \end{definition}
 
-It's interesting to note that powers of $A_\tau$ capture allowable trajectories, or more precisely the $(i,j)$th element of the $k$th power of $A_\tau$ will be $1$ iff there is an orbit of $\tau$ of length $k$.
+It's interesting to note that powers of $A_\tau$ capture allowable trajectories, or more precisely the $(i,j)$th element of the $k$th power of $A_\tau$ will be nonzero iff there is an admissable itinerary of length
+$k$ from $x_i$ to $x_j$.
+In particular, ${(A_\tau^k)}_{i,j}$ is the number of different length $k$ orbits linking $x_i$ and $x_j$
 So in principle we have succeeded in reducing questions about the periodic orbits of a flow to questions about powers of a single matrix. Of course, in practice it will be very difficult to compute $A$ from an arbitrary
 dynamical system.
 
@@ -179,7 +181,7 @@ For example the inflation $\bm{L} : \L \to \L$ shown in Figure~\ref{fig:lorenz_s
   \bm{L} : \L \to \L \left\{ \begin{matrix} & x_1 \mapsto x_1 \\ & x_2 \mapsto x_1 x_2 \end{matrix}\right.
 \end{equation}
 
-Consider the Lorenz template $\L$ with the inflation $\tilde{\L} \subset \L$ as identified in Figure!\ref{fig:lorenz_subtemplate}.
+Consider the Lorenz template $\L$ with the inflation $\tilde{\L} \subset \L$ as identified in Figure~\ref{fig:lorenz_subtemplate}.
 Label the left and right strips of $\L$ $x_1$ and $x_2$ respectively, and the left and right strips of $\tilde{L}$ $\tilde{x_1}, \tilde{x_2}$.
 Even though $\tilde{\L} \subset \L$, $\tilde{\L} \cong \L$! To understand why Lemma~\ref{lemma:symbolic} holds, consider how the $\tilde{x_i}$ are contained in $x_i$. $\tilde{x_1} \subset x_1$ so one can easily see that
 orbits in $\L$ passing through $x_1$ will pass through $\tilde{x_1}$ under the inflation that takes $\L$ to $\tilde{\L}$. On the other hand, $\tilde{x_2} \subset x_1 \cup x_2$; orbits in $\tilde{\L}$ passing through
