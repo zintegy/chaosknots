@@ -137,11 +137,18 @@ Our main tool in proving the existence of a universal template (and by extension
 
 
 \begin{definition}[Template inflation]
-  A  \emph{template inflation} of a template $\tau$ is a map $\bm{R} : \tau \to \tau$ taking orbits to orbits which is a diffeomorphism onto its image.
+  A  \emph{template inflation} of a template $\tau$ into a template $\rho$ is a map $\bm{R} : \tau \to \rho$ taking orbits to orbits which is a diffeomorphism onto its image.
   The image of a template inflation is, by definition, a subtemplate.
 \end{definition}
 
-See Figure~\ref{fig:lorenz_subtemplate} for a helpful illustration of how an inflation might be constructed.
+
+\begin{definition}[Template renormalization]
+  In the important case where an inflation $\bm{R}$ maps $\tau \to \tau$ we say that $\bm{R}$ is a \emph{template renormalization} as $\bm{R}(\tau) \subset \tau$ is a subtemplate of $\tau$ which
+  is diffeomorphic to $\tau$.
+\end{definition}
+
+
+See Figure~\ref{fig:lorenz_subtemplate} for a helpful illustration of how a template renormalization might be constructed.
 
 
 
@@ -163,14 +170,20 @@ A \emph{very} useful lemma proved in~\cite{knottyode} follows
 
 \begin{lemma}[Ghrist \& Holmes 1993]
   A template inflation $\bm{R}: \tau \to \rho$ induces a map $\bm{R}: \Sigma_\tau \to \Sigma_\rho$ whose action is to inflate each element of the Markov partition of strips $\set{x_i : i = 1\cdots N}$ to a finite
-  admissible word $\set{\bm{w_i} = w_1 w_2 \cdots w_{n(i)} : i = 1 \cdots N, w_i \in \set{x_i}}$
+  admissible word $\set{\bm{w_i} = w_1 w_2 \cdots w_{n(i)} : i = 1 \cdots N, w_i \in \set{x_i}}$\label{lemma:symbolic}
 \end{lemma}
 
-For example the inflation $\bm{L} : \L \to \L$ shown in Figure~\ref{fig:lorenz_subtemplate} has the following action on the set of strips:
+For example the inflation $\bm{L} : \L \to \L$ shown in Figure~\ref{fig:lorenz_subtemplate} (with $x_1$ (resp. $x_2$) set as the left (right) strip) has the following action on itineraries in $\L$:
 
 \begin{equation}
   \bm{L} : \L \to \L \left\{ \begin{matrix} & x_1 \mapsto x_1 \\ & x_2 \mapsto x_1 x_2 \end{matrix}\right.
 \end{equation}
+
+A high-level discussion which hopefully serves to elucidate the above remarks follows. Consider the Lorenz template $\L$ with the inflation $\tilde{\L} \subset \L$ as identified in Figure!\ref{fig:lorenz_subtemplate}.
+Label the left and right strips of $\L$ $x_1$ and $x_2$ respectively, and the left and right strips of $\tilde{L}$ $\tilde{x_1}, \tilde{x_2}$.
+Even though $\tilde{\L} \subset \L$, $\tilde{\L} \cong \L$! To understand why Lemma~\ref{lemma:symbolic} holds, consider how the $\tilde{x_i}$ are contained in $x_i$. $\tilde{x_1} \subset x_1$ so one can easily see that
+orbits in $\L$ passing through $x_1$ will pass through $\tilde{x_1}$ under the inflation that takes $\L$ to $\tilde{\L}$. On the other hand, $\tilde{x_2} \subset x_1 \cup x_2$; orbits in $\tilde{\L}$ passing through
+$\tilde{x_2}$ will first pass through $x_1$ and then $x_2$ when pulled back along the inflation.
 
 Inflations take knots to knots but will typically change the knot type. We identify a special class of inflations that preserve knot type, as these are the inflations that we're really after.
 
