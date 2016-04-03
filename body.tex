@@ -147,22 +147,22 @@ Additionally, we will need the following (\emph{not} isotopic) inflation which t
 
 
 
-The symbolic action of $F^\ast$ is easily computed. For example, given $F$ as defined above, $F^*$ is defined as $$F^*: U \hookrightarrow \V \begin{cases} x_1 \mapsto x_2 x_4 \\ x_2 \mapsto x_2 \\ x_3 \mapsto x_3 \\ x_4 \mapsto x_3 x_4 x_1 \end{cases}$$ Because $F$ is isotopic, we know that $F^*$ must be isotopic as well; in addition, $G^*$ is also isotopic.
+The symbolic action of $\mathcal{F}^\ast$ is easily computed. For example, given $\mathcal{F}$ as defined above, $\mathcal{F}^*$ is defined as $$\mathcal{F}^*: U \hookrightarrow \V \begin{cases} x_1 \mapsto x_2 x_4 \\ x_2 \mapsto x_2 \\ x_3 \mapsto x_3 \\ x_4 \mapsto x_3 x_4 x_1 \end{cases}$$ Because $\mathcal{F}$ is isotopic, we know that $\mathcal{F}^*$ must be isotopic as well; in addition, $G^*$ is also isotopic.
 
 We finally have the tools we need to give the proof that $\W_q$ can be found in $\V$ for all $q$.
 
 We must start with a lemma, provided by Ghrist.
 \begin{lemma}[Ghrist 1997]
-    Given that a subtemplate of $\V$ doesn't contain $x_1^\infty$, it is possible to add an ear near the top branch line, like that in Figure~\ref{fig:appendToV}, which is a positive ear. Similarly, given that a subtemplate of $\V$ doesn't contain $X_3^\infty$, it is possible to add an ear near the bottom branch line, which is a negative ear.
+    Given that a subtemplate of $\V$ doesn't contain $x_1^\infty$, it is possible to add an ear near the top branch line, like that in Figure~\ref{fig:appendToV}, which is a positive ear. Similarly, given that a subtemplate of $\V$ doesn't contain $X_3^\infty$, it is possible to add an ear near the bottom branch line, which is a negative ear. Note that this is not an inflation; we are simply adding an ear to the subtemplate. 
 \end{lemma}
 
 
 Now, we prove that $\W_q \subset \V$ for all $q$.
 
 \begin{proof}
-Let us begin with $\W_1 = \V$. Let us calculate the symbolic action of the inflation $\mathfrak{H}: \V \to \V$ defined as $F^* G F G^*$. This is accomplished with the aid of Lemma~\ref{lemma:symbolic} by successively expanding
+    Let us begin with $\W_1 = \V$. Let us calculate the symbolic action of the inflation $\mathfrak{H}: \V \to \V$ defined as $\mathcal{F}^* \mathcal{G} \mathcal{F} \mathcal{G}^*$. This is accomplished with the aid of Lemma~\ref{lemma:symbolic} by successively expanding
 letters (strips) in the space of itinerary into the admissable words they are mapped into under the inflation.
-For instance, $G^\ast$ takes $x_1$ to $x_4 x_2$, which when composed with $F$'s action on the itineraries maps to $x_4 x_1 x_2 x_3$. Performing all of the composition in succession yields the full action:
+For instance, $\mathcal{G}^\ast$ takes $x_1$ to $x_4 x_2$, which when composed with $\mathcal{F}$'s action on the itineraries maps to $x_4 x_1 x_2 x_3$. Performing all of the composition in succession yields the full action:
 
     $$\mathfrak{H}: \V \hookrightarrow \V \begin{cases}
         x_1 \mapsto x_2 x_3^2 x_4 x_1 (x_2 x_4)^2 x_2 x_3 x_4 x_1 \\
@@ -184,7 +184,7 @@ For instance, $G^\ast$ takes $x_1$ to $x_4 x_2$, which when composed with $F$'s 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{appendToV.png}
-    \caption{Appending a positive ear to $T$ (left) yields $T^+$ (right). The thin line on (a) is a section of the subtemplate after performing $\mathcal{H}$; to add the ear, we widen the subtemplate so that it includes the inner boundary Figure reproduced from~\cite{Ghrist1996}} \label{fig:appendToV} %%%%%%%%%%%%%%%%%%%%% link below.
+    \caption{Appending a positive ear to $T$ (left) yields $T^+$ (right). The thin line on (a) is a section of the subtemplate after performing $\mathcal{H}$; to add the positive ear, we widen the subtemplate so that when it splits, one half of the split returns to itself to make an infinite loop, while the other half continues as in the original subtemplate. Figure reproduced from~\cite{Ghrist1996}} \label{fig:appendToV} %%%%%%%%%%%%%%%%%%%%% link below.
 \end{figure}
 
 
