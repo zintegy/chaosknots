@@ -5,14 +5,14 @@
 
 \section{Proof that $\mathcal{V}$ is a universal template}
 
-In this section we outline the proof given in full detail in~\cite{Ghrist1996} that $\V$ (shown in figure~\ref{fig:universal}) is a universal template. Details will inevitably be omitted but our goal in this exposition is to straddle the line between
+In this section we outline the proof given in full detail in~\cite{Ghrist1996} that $\V$ (shown in Figure~\ref{fig:universal}) is a universal template. Details will inevitably be omitted but our goal in this exposition is to straddle the line between
 the full proof and the very high-level outline given in~\cite{knottyode}, giving a concise and readable exposition that gets at the essence of the proof.
 
 The essential idea is to find a special set of templates which have a special property that forces them to support all braids as orbits, and then to show that these templates can be found in $\V$. Since all knots and links
 can be realized as a braid, this immediately implies that $\V$ is universal. The last step of showing that the special braid-supporting templates can found in $\V$ is the most difficult by far and where we will have to do the
 most hand-waving. Nonetheless, we will try to capture the essence.
 
-Also important in this proof is the existence of the $\mathcal{U}$ template, pictured below. $\mathcal{U}$ and $\V$ are essentially equivalent, but there is one minor difference, and $\mathcal{U}$ is universal as well.
+Also important in this proof is the existence of the $\mathcal{U}$ template, pictured below in Figure~\ref{fig:universal}. $\mathcal{U}$ and $\V$ are essentially equivalent, with $x_3$ and $x_4$ swapped. $\mathcal{U}$ also universal.
 
 \begin{figure}[h]
   % not sure where to put this, but not here
@@ -88,7 +88,7 @@ two \emph{ears} of alternating `sign' to one side. The property that successive 
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.8\textwidth]{ear_exchange.png}
-  \caption{Top: $\pi_2$ in $B_5$ Bottom: $\pi_2'$ in $B_5$. Figure reproduced from~\cite{Ghrist1996}}\label{fig:earexchange}
+  \caption{Top: how to put $\pi_2$ on a positive ear Bottom: how to put $\pi_2^\prime$ on a negative ear. Figure reproduced from~\cite{Ghrist1996}}\label{fig:earexchange}
 \end{figure}
 
 
@@ -99,9 +99,11 @@ two \emph{ears} of alternating `sign' to one side. The property that successive 
 %Start with renormalized $\W_1 \in \V$, and append a pair of ears to\dots
 
 % is this actually necessary?
+\subsection{Find $\W_q \subset \V$ for all $q$}
 
+The remainder of the proof is to show with a careful sequence of isotopic renormalizations that $W_q$ is contained in $\V$ for all $q$. First we define the needed renormalizations.
 
-\subsection{Special Inflations: $F$ and $G$}
+\subsubsection{Special Inflations: $F$ and $G$}
 
 In his proof, Ghrist uses a few special inflations, $F$ and $G$, and accompanies them with a proposition:
 
@@ -112,7 +114,8 @@ $$F: U \hookrightarrow \V \begin{cases} x_1 \mapsto x_1 \\ x_2 \mapsto x_1 x_2 x
 $$G: \V \hookrightarrow U \begin{cases} x_1 \mapsto x_1 \\ x_2 \mapsto x_1 \\ x_3 \mapsto x_2 x_4 \\ x_4 \mapsto x_2 x_3 x_4 \end{cases}$$
 \end{prop}
 
-As proof of their isotopy, diagrams showing the inflation are given.
+Diagrams witness to the fact these are valid isotopic inflations are given in Figures~\ref{fig:isotopicF} and~\ref{fig:isotopicG}. We couldn't infer isotopy from the diagram given in Figure~\ref{fig:lorenz_subtemplate}
+because the subtemplate in that figure had a twist in a strip, but we can infer isotopy from the diagrams in Figures~\ref{fig:isotopicF} and~\ref{fig:isotopicG}.
 
 
 \begin{figure}[h]
@@ -128,20 +131,23 @@ As proof of their isotopy, diagrams showing the inflation are given.
 \end{figure}
 
 
-In addition, we can consider the following inflation: $$\chi: \begin{matrix} U \mapsto U \\ \V \mapsto \V \end{matrix} \begin{cases} x_1 \mapsto x_3 \\ x_2 \mapsto x_4 \\ x_3 \mapsto x_1 \\ x_4 \mapsto x_2 \end{cases}$$
+Additionally, we will need the following (\emph{not} isotopic) inflation which takes each orbit to its mirror image: $$\chi: \begin{matrix} U \mapsto U \\ \V \mapsto \V \end{matrix} \begin{cases} x_1 \mapsto x_3 \\ x_2 \mapsto x_4 \\ x_3 \mapsto x_1 \\ x_4 \mapsto x_2 \end{cases}$$
 
-    The purpose of this inflation is to switch the two branch lines.
+    Although $\chi$ is not isotopic on its own, its conjugation with another inflation is isotopic as seen in the following lemma.
 
     \begin{lemma}[Ghrist 1997]
         Given an isotopic inflation $A$ having either $\mathcal{U}$ or $\V$ as a domain and range (independently of each other), the inflation $A^* = \chi A \chi$ is also isotopic.
     \end{lemma}
 
-For example, given $F$ as defined above, $F^*$ is defined as $$F^*: U \hookrightarrow \V \begin{cases} x_1 \mapsto x_2 x_4 \\ x_2 \mapsto x_2 \\ x_3 \mapsto x_3 \\ x_4 \mapsto x_3 x_4 x_1 \end{cases}$$ Because $F$ is isotopic, we know that $F^*$ must be isotopic as well; in addition, $G^*$ is also isotopic.
+    \begin{proof}
+      Reidemeister moves commute with the mirror operation. That is, if $K$ is a projection of a knot and $R$ is a Reidemeister move, then $R(K^\ast)  \cong  {(R(K))}^\ast$. So although $\chi$ does not commute with $A$ as far as the symbolic
+      action the inflations have on orbits, their \emph{topological} actions commute. Hence, topologically, $A^\ast$ acts as $\chi^2 A$. $\chi^2$ is the identity so is obviously isotopic. Therefore $A^\ast$ is isotopic to $A$.
+    \end{proof}
 
-    Finally, in the next section, we can include the inflation $\mathfrak{H} = F^* G F G^*$ in the next section to continue our proof.
 
+The symbolic action of $F^\ast$ is easily computed. For example, given $F$ as defined above, $F^*$ is defined as $$F^*: U \hookrightarrow \V \begin{cases} x_1 \mapsto x_2 x_4 \\ x_2 \mapsto x_2 \\ x_3 \mapsto x_3 \\ x_4 \mapsto x_3 x_4 x_1 \end{cases}$$ Because $F$ is isotopic, we know that $F^*$ must be isotopic as well; in addition, $G^*$ is also isotopic.
 
-\subsection{Find $\W_q \subset \V$ for all $q$}
+We finally have the tools we need to give the proof that $\W_q$ can be found in $\V$ for all $q$.
 
 We must start with a lemma, provided by Ghrist.
 \begin{lemma}[Ghrist 1997]
@@ -152,7 +158,9 @@ We must start with a lemma, provided by Ghrist.
 Now, we prove that $\W_q \subset \V$ for all $q$.
 
 \begin{proof}
-Let us begin with $\W_1 = \V$. We calculate the inflation $\mathfrak{H} = F^* G F G^*$. This is done by taking $x_1$ in $G^*$ to be $x_4 x_2$, then substituting those values of $x_4$ and $x_2$ in $F$ to get $x_4 x_1 x_2 x_3$. Each of these is found in $G$ and substituted to get $x_2 x_3 x_4 x_1^2 x_2 x_4$, then lastly we find these in $F^*$ to get what $x_1$ is finally mapped to. We can do the same for the other strips.
+Let us begin with $\W_1 = \V$. Let us calculate the symbolic action of the inflation $\mathfrak{H}: \V \to \V$ defined as $F^* G F G^*$. This is accomplished with the aid of Lemma~\ref{lemma:symbolic} by successively expanding
+letters (strips) in the space of itinerary into the admissable words they are mapped into under the inflation.
+For instance, $G^\ast$ takes $x_1$ to $x_4 x_2$, which when composed with $F$'s action on the itineraries maps to $x_4 x_1 x_2 x_3$. Performing all of the composition in succession yields the full action:
     $$\mathfrak{H}: \V \hookrightarrow \V \begin{cases}
         x_1 \mapsto x_2 x_3^2 x_4 x_1 (x_2 x_4)^2 x_2 x_3 x_4 x_1 \\
         x_2 \mapsto x_2 x_3^2 x_4 x_1 (x_2 x_4)^3 x_2 x_3 x_4 x_1 \\
@@ -161,9 +169,10 @@ Let us begin with $\W_1 = \V$. We calculate the inflation $\mathfrak{H} = F^* G 
 
         Note that $G^*$ is an isotopic inflation from $\V$ to $\mathcal{U}$, $F$ is an isotopic inflation from $\mathcal{U}$ to $\V$, $G$ is an isotopic inflation from $\V$ to $\mathcal{U}$, and that $F^*$ is an isotopic inflation from $\mathcal{U}$ to $\V$. It must follow that $\mathfrak{H}$ is an isotopic inflation from $V$ to $V$; in other words, an isotopic renormalization.
 
-        This renormalization satisfies the condition that this subtemplate does not contain $x_1^\infty$. Then, after performing this renormalization, we will be able to add a positive ear at the top branch line; after doing so, we now have $\W_1^+$.
+        This renormalization satisfies the condition that its image (which is a subtemplate of $\V$) does not contain $x_1^\infty$. So, after performing this renormalization, we will be able to add a positive ear at the top branch line
+        yielding an object we refer to as $\W_1^+$. To obtain $\W_2$ from this, we must add the negative ear.
 
-        There exists a very similar inflation $\mathfrak{H}^*$ from $\V$ onto $\V$ that will allow us to add a negative ear at the bottom branch line. Now, we have added a positive ear and a negative ear, so we are at $\W_2$, yet this subtemplate is still contained within $\V$; this implies that $\W_2 \subset \V$. Now, we can repeat this procedure, adding another positive and negative ear after the respective inflations to get $\W_3$.
+        There exists a similar inflation $\mathfrak{H}^*$ from $\V$ onto $\V$ that allows for the addition of a negative ear at the bottom branch line. Now, we have added a positive ear and a negative ear, so we are at $\W_2$, yet this subtemplate is still contained within $\V$; this implies that $\W_2 \subset \V$. Now, we can repeat this procedure, adding another positive and negative ear after the respective inflations to get $\W_3$.
 
         This procedure can be repeated $q$ times to show that $\W_q \subset \V$ for any positive $q$; thus, by induction, $\W_q \subset \V$ for all $q$.
     \end{proof}
