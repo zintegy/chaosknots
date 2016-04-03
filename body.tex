@@ -101,9 +101,9 @@ two \emph{ears} of alternating `sign' to one side. The property that successive 
 % is this actually necessary?
 
 
-\subsection{Special Inflations: $F$ and $G$}
+\subsection{Special Inflations: $\mathcal{F}$ and $\mathcal{G}$}
 
-In his proof, Ghrist uses a few special inflations, $F$ and $G$, and accompanies them with a proposition:
+In his proof, Ghrist uses a few special inflations, $\mathcal{F}$ and $\mathcal{G}$, and accompanies them with a proposition:
 
 \begin{prop}
     The following inflations are isotopic.
@@ -118,13 +118,13 @@ As proof of their isotopy, diagrams showing the inflation are given.
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.8\textwidth]{inflationF.png}
-  \caption{Left to Right: A subtemplate of $\V$ as given by $F$, then cut along the boundary and removed from $\V$, simplified to show that it equals $\mathcal{U}$. Figure reproduced from~\cite{ghs1997}}\label{fig:isotopicF}
+  \caption{Left to Right: A subtemplate of $\V$ as given by $\mathcal{F}$, then cut along the boundary and removed from $\V$, simplified to show that it equals $\mathcal{U}$. Figure reproduced from~\cite{ghs1997}}\label{fig:isotopicF}
 \end{figure}
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.8\textwidth]{inflationG.png}
-  \caption{Left to Right: A subtemplate of $\mathcal{U}$ as given by $G$, then cut along the boundary and removed from $\mathcal{U}$, simplified to show that it equals $\V$. Figure reproduced from~\cite{ghs1997}}\label{fig:isotopicG}
+  \caption{Left to Right: A subtemplate of $\mathcal{U}$ as given by $\mathcal{G}$, then cut along the boundary and removed from $\mathcal{U}$, simplified to show that it equals $\V$. Figure reproduced from~\cite{ghs1997}}\label{fig:isotopicG}
 \end{figure}
 
 
@@ -136,9 +136,9 @@ In addition, we can consider the following inflation: $$\chi: \begin{matrix} U \
         Given an isotopic inflation $A$ having either $\mathcal{U}$ or $\V$ as a domain and range (independently of each other), the inflation $A^* = \chi A \chi$ is also isotopic.
     \end{lemma}
 
-For example, given $F$ as defined above, $F^*$ is defined as $$F^*: U \hookrightarrow \V \begin{cases} x_1 \mapsto x_2 x_4 \\ x_2 \mapsto x_2 \\ x_3 \mapsto x_3 \\ x_4 \mapsto x_3 x_4 x_1 \end{cases}$$ Because $F$ is isotopic, we know that $F^*$ must be isotopic as well; in addition, $G^*$ is also isotopic.
+For example, given $\mathcal{F}$ as defined above, $mathcal{F}^*$ is defined as $$mathcal{F}^*: U \hookrightarrow \V \begin{cases} x_1 \mapsto x_2 x_4 \\ x_2 \mapsto x_2 \\ x_3 \mapsto x_3 \\ x_4 \mapsto x_3 x_4 x_1 \end{cases}$$ Because $\mathcal{F}$ is isotopic, we know that $mathcal{F}^*$ must be isotopic as well; in addition, $mathcal{G}^*$ is also isotopic.
 
-    Finally, in the next section, we can include the inflation $\mathfrak{H} = F^* G F G^*$ in the next section to continue our proof.
+    Finally, in the next section, we can include the inflation $\mathfrak{H} = mathcal{F}^* mathcal{G} mathcal{F} mathcal{G}^*$ in the next section to continue our proof.
 
 
 \subsection{Find $\W_q \subset \V$ for all $q$}
@@ -152,14 +152,14 @@ We must start with a lemma, provided by Ghrist.
 Now, we prove that $\W_q \subset \V$ for all $q$.
 
 \begin{proof}
-Let us begin with $\W_1 = \V$. We calculate the inflation $\mathfrak{H} = F^* G F G^*$. This is done by taking $x_1$ in $G^*$ to be $x_4 x_2$, then substituting those values of $x_4$ and $x_2$ in $F$ to get $x_4 x_1 x_2 x_3$. Each of these is found in $G$ and substituted to get $x_2 x_3 x_4 x_1^2 x_2 x_4$, then lastly we find these in $F^*$ to get what $x_1$ is finally mapped to. We can do the same for the other strips.
+Let us begin with $\W_1 = \V$. We calculate the inflation $\mathfrak{H} = mathcal{F}^* mathcal{G} mathcal{F} mathcal{G}^*$. This is done by taking $x_1$ in $mathcal{G}^*$ to be $x_4 x_2$, then substituting those values of $x_4$ and $x_2$ in $\mathcal{F}$ to get $x_4 x_1 x_2 x_3$. Each of these is found in $\mathcal{G}$ and substituted to get $x_2 x_3 x_4 x_1^2 x_2 x_4$, then lastly we find these in $mathcal{F}^*$ to get what $x_1$ is finally mapped to. We can do the same for the other strips.
     $$\mathfrak{H}: \V \hookrightarrow \V \begin{cases}
         x_1 \mapsto x_2 x_3^2 x_4 x_1 (x_2 x_4)^2 x_2 x_3 x_4 x_1 \\
         x_2 \mapsto x_2 x_3^2 x_4 x_1 (x_2 x_4)^3 x_2 x_3 x_4 x_1 \\
         x_3 \mapsto x_2 x_3^2 x_4 x_1  x_2 x_4  \\
         x_4 \mapsto x_2 x_3^2 x_4 x_1  x_2 x_4  \end{cases} $$
 
-        Note that $G^*$ is an isotopic inflation from $\V$ to $\mathcal{U}$, $F$ is an isotopic inflation from $\mathcal{U}$ to $\V$, $G$ is an isotopic inflation from $\V$ to $\mathcal{U}$, and that $F^*$ is an isotopic inflation from $\mathcal{U}$ to $\V$. It must follow that $\mathfrak{H}$ is an isotopic inflation from $V$ to $V$; in other words, an isotopic renormalization.
+        Note that $mathcal{G}^*$ is an isotopic inflation from $\V$ to $\mathcal{U}$, $\mathcal{F}$ is an isotopic inflation from $\mathcal{U}$ to $\V$, $\mathcal{G}$ is an isotopic inflation from $\V$ to $\mathcal{U}$, and that $mathcal{F}^*$ is an isotopic inflation from $\mathcal{U}$ to $\V$. It must follow that $\mathfrak{H}$ is an isotopic inflation from $V$ to $V$; in other words, an isotopic renormalization.
 
         This renormalization satisfies the condition that this subtemplate does not contain $x_1^\infty$. Then, after performing this renormalization, we will be able to add a positive ear at the top branch line; after doing so, we now have $\W_1^+$.
 
