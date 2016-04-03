@@ -20,7 +20,7 @@ Also important in this proof is the existence of the $\mathcal{U}$ template, pic
     %this doesn't seem like too bad of a spot; you mention figure 1 in the first paragraph of this section so it shouldn't be placed too far away from that paragraph
   \centering
   \includegraphics[width=0.8\textwidth]{universalVU.png}
-  \caption{(a) The universal template $\V$ and (b) The universal template $U$, reproduced from~\cite{Ghrist 1997}}\label{fig:universal}
+  \caption{(a) The universal template $\V$ and (b) The universal template $U$, reproduced from~\cite{ghs1997}}\label{fig:universal}
 \end{figure}
 
 
@@ -107,9 +107,9 @@ In his proof, Ghrist uses a few special inflations, $F$ and $G$, and accompanies
 
 \begin{prop}
     The following inflations are isotopic.
-$$F: U \hookrightarrow \V \begin{cases} x_1 \rightarrow x_1 \\ x_2 \rightarrow x_1 x_2 x_3 \\ x_3 \rightarrow x_4 x_2 \\ x_4 \rightarrow x_4 \end{cases}$$
+$$F: U \hookrightarrow \V \begin{cases} x_1 \mapsto x_1 \\ x_2 \mapsto x_1 x_2 x_3 \\ x_3 \mapsto x_4 x_2 \\ x_4 \mapsto x_4 \end{cases}$$
 
-$$G: \V \hookrightarrow U \begin{cases} x_1 \rightarrow x_1 \\ x_2 \rightarrow x_1 \\ x_3 \rightarrow x_2 x_4 \\ x_4 \rightarrow x_2 x_3 x_4 \end{cases}$$
+$$G: \V \hookrightarrow U \begin{cases} x_1 \mapsto x_1 \\ x_2 \mapsto x_1 \\ x_3 \mapsto x_2 x_4 \\ x_4 \mapsto x_2 x_3 x_4 \end{cases}$$
 \end{prop}
 
 As proof of their isotopy, diagrams showing the inflation are given.
@@ -118,17 +118,17 @@ As proof of their isotopy, diagrams showing the inflation are given.
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.8\textwidth]{inflationF.png}
-  \caption{Left to Right: A subtemplate of $\V$ as given by $F$, then cut along the boundary and removed from $\V$, simplified to show that it equals $U$. Figure reproduced from~\cite{Ghrist 1997}}\label{fig:isotopicF}
+  \caption{Left to Right: A subtemplate of $\V$ as given by $F$, then cut along the boundary and removed from $\V$, simplified to show that it equals $U$. Figure reproduced from~\cite{ghs1997}}\label{fig:isotopicF}
 \end{figure}
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.8\textwidth]{inflationG.png}
-  \caption{Left to Right: A subtemplate of $U$ as given by $G$, then cut along the boundary and removed from $U$, simplified to show that it equals $\V$. Figure reproduced from~\cite{Ghrist 1997}}\label{fig:isotopicG}
+  \caption{Left to Right: A subtemplate of $U$ as given by $G$, then cut along the boundary and removed from $U$, simplified to show that it equals $\V$. Figure reproduced from~\cite{ghs1997}}\label{fig:isotopicG}
 \end{figure}
 
 
-In addition, we can consider the following inflation: $$\chi: \begin{matrix} U \rightarrow U \\ \V \rightarrow \V \end{matrix} \begin{cases} x_1 \rightarrow x_3 \\ x_2 \rightarrow x_4 \\ x_3 \rightarrow x_1 \\ x_4 \rightarrow x_2 \end{cases}$$
+In addition, we can consider the following inflation: $$\chi: \begin{matrix} U \mapsto U \\ \V \mapsto \V \end{matrix} \begin{cases} x_1 \mapsto x_3 \\ x_2 \mapsto x_4 \\ x_3 \mapsto x_1 \\ x_4 \mapsto x_2 \end{cases}$$
 
     The purpose of this inflation is to switch the two branch lines.
 
@@ -136,7 +136,7 @@ In addition, we can consider the following inflation: $$\chi: \begin{matrix} U \
         Given an isotopic inflation $A$ having either $U$ or $\V$ as a domain and range (independently of each other), the inflation $A^* = \chi A \chi$ is also isotopic.
     \end{lemma}
 
-For example, given $F$ as defined above, $F^*$ is defined as $$F^*: U \hookrightarrow \V \begin{cases} x_1 \rightarrow x_2 x_4 \\ x_2 \rightarrow x_2 \\ x_3 \rightarrow x_3 \\ x_4 \rightarrow x_3 x_4 x_1 \end{cases}$$
+For example, given $F$ as defined above, $F^*$ is defined as $$F^*: U \hookrightarrow \V \begin{cases} x_1 \mapsto x_2 x_4 \\ x_2 \mapsto x_2 \\ x_3 \mapsto x_3 \\ x_4 \mapsto x_3 x_4 x_1 \end{cases}$$ Because $F$ is isotopic, we know that $F^*$ must be isotopic as well; in addition, $G^*$ is also isotopic.
 
     Finally, in the next section, we can include the inflation $\mathfrak{H} = F^* G F G^*$ in the next section to continue our proof.
 
@@ -148,15 +148,20 @@ We must start with a lemma, provided by Ghrist.
     Given that a subtemplate of $\V$ doesn't contain $x_1^\infty$, it is possible to add an ear near the top branch line, like that in Figure~\ref{fig:appendToV}, which is a positive ear. Similarly, given that a subtemplate of $\V$ doesn't contain $X_3^\infty$, it is possible to add an ear near the bottom branch line, which is a negative ear.
 \end{lemma}
 
-\begin{proof}
-Let us begin with $\W_1 = \V$. We perform the inflation $\mathfrak{H}$:
-    $$\mathfrak{H}: \V \hookrightarrow \V \begin{cases}
-        x_1 \rightarrow x_2 x_3^2 x_4 x_1 (x_2 x_4)^2 x_2 x_3 x_4 x_1 \\
-        x_2 \rightarrow x_2 x_3^2 x_4 x_1 (x_2 x_4)^3 x_2 x_3 x_4 x_1 \\
-        x_3 \rightarrow x_2 x_3^2 x_4 x_1  x_2 x_4  \\
-        x_4 \rightarrow x_2 x_3^2 x_4 x_1  x_2 x_4  \end{cases} $$
 
-        This inflation satisfies the condition that this subtemplate does not contain $x_1^\infty$. Then, after performing this inflation, we will be able to add a positive ear at the top branch line; after doing so, we now have $\W_1^+$.
+Now, we prove that $\W_q \subset \V$ for all $q$. 
+
+\begin{proof}
+Let us begin with $\W_1 = \V$. We calculate the inflation $\mathfrak{H} = F^* G F G^*$. This is done by taking $x_1$ in $G^*$ to be $x_4 x_2$, then substituting those values of $x_4$ and $x_2$ in $F$ to get $x_4 x_1 x_2 x_3$. Each of these is found in $G$ and substituted to get $x_2 x_3 x_4 x_1^2 x_2 x_4$, then lastly we find these in $F^*$ to get what $x_1$ is finally mapped to. We can do the same for the other strips.
+    $$\mathfrak{H}: \V \hookrightarrow \V \begin{cases}
+        x_1 \mapsto x_2 x_3^2 x_4 x_1 (x_2 x_4)^2 x_2 x_3 x_4 x_1 \\
+        x_2 \mapsto x_2 x_3^2 x_4 x_1 (x_2 x_4)^3 x_2 x_3 x_4 x_1 \\
+        x_3 \mapsto x_2 x_3^2 x_4 x_1  x_2 x_4  \\
+        x_4 \mapsto x_2 x_3^2 x_4 x_1  x_2 x_4  \end{cases} $$
+
+        Note that $G^*$ is an isotopic inflation from $\V$ to $U$, $F$ is an isotopic inflation from $U$ to $\V$, $G$ is an isotopic inflation from $\V$ to $U$, and that $F^*$ is an isotopic inflation from $U$ to $\V$. It must follow that $\mathfrak{H}$ is an isotopic inflation from $V$ to $V$; in other words, an isotopic renormalization.
+
+        This renormalization satisfies the condition that this subtemplate does not contain $x_1^\infty$. Then, after performing this renormalization, we will be able to add a positive ear at the top branch line; after doing so, we now have $\W_1^+$.
 
         There exists a very similar inflation $\mathfrak{H}^*$ from $\V$ onto $\V$ that will allow us to add a negative ear at the bottom branch line. Now, we have added a positive ear and a negative ear, so we are at $\W_2$, yet this subtemplate is still contained within $\V$; this implies that $\W_2 \subset \V$. Now, we can repeat this procedure, adding another positive and negative ear after the respective inflations to get $\W_3$.
 
@@ -171,8 +176,6 @@ Let us begin with $\W_1 = \V$. We perform the inflation $\mathfrak{H}$:
 \end{figure}
 
 
-
-%https://www.math.upenn.edu/~ghrist/preprints/eraams.pdf
 
 \subsection{Universal Templates and V}
 
