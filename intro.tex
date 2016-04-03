@@ -55,8 +55,8 @@ We do not discuss the intricacies of this construction, for details, see~\cite{b
 \end{figure}
 
 Figure~\ref{fig:lorenz} shows the template for the familiar Lorenz system, the canonical chaotic system, described in equations~\ref{eq:lorenz}-\ref{eq:lorenz3}. The simplicity of the Lorenz template is a testament to the elegance of
-templates - the Lorenz template exactly captures the repeated expanding and folding over of orbits that is the signature of chaos. For certain parameter values, periodic solutions to these equations form a link of infinitely
-many components~\cite{knottyode}, although we will see later that the Lorenz system is not universal.
+templates - the Lorenz template exactly captures the repeated expanding and folding over of orbits that is the signature of chaos. Even though for certain parameter values, periodic solutions to these equations form a link of infinitely
+many components~\cite{knottyode}, this system is not universal! For instance, the figure-eight knot cannot be found amongst the periodic orbits $\L$~\cite{knottyode}.
 
 \begin{align}
   \label{eq:lorenz}
@@ -95,10 +95,9 @@ In particular, ${(A_\tau^k)}_{i,j}$ is the number of different length $k$ orbits
 So in principle we have succeeded in reducing questions about the periodic orbits of a flow to questions about powers of a single matrix. Of course, in practice it will be very difficult to compute $A$ from an arbitrary
 dynamical system.
 
-Although crossing information is implicitly contained in $A_\tau$, it does not directly give us much information about the knot type of periodic orbits.
-\acom{come back to this}
- An interesting question that we briefly consider
-in Section~\ref{sec:misc} is what information should keep track of in addition to $A_\tau$ to (relatively) easily compute the link of knots contained in a given template $\tau$.
+$A_\tau$ does \emph{not} contain information about how the strips of a given template cross, meaning that it is not possible to write down the link of knots contained in a template $\tau$ if given only $A_\tau$.
+ An interesting question that we consider
+in Section~\ref{sec:misc} is: what information should one keep track of in addition to $A_\tau$ to allow identification of the knot types of periodic orbits?
 
 See the Figure~\ref{fig:universal} for an example of a template with labeled strips.
 
@@ -160,7 +159,7 @@ we will see exactly how its usefulness is manifest.
 \begin{figure}[h]
   \centering
   \includegraphics[width=\textwidth]{lorenz_subtemplate.png}
-  \caption{A subtemplate of the Lorenz subtemplate $\L$. When it is cut along the boundary and removed from $\L$, it forms a template diffeomorphic to the original one!
+  \caption{A subtemplate of the Lorenz template $\L$. When it is cut along the boundary and removed from $\L$, it forms a template diffeomorphic to the original one!
     Bold lines indicate the boundary of the $\L$ whereas the lighter lines indicate the boundary of the subtemplate, but can also be thought of as orbits in $\L$.
     Lines are dashed where one subtemplate passes behind another. The crossings in the template boundaries on the lower figure
     are intended to indicate twists in the strip.
@@ -183,7 +182,7 @@ For example the inflation $\bm{L} : \L \to \L$ shown in Figure~\ref{fig:lorenz_s
 \end{equation}
 
 Consider the Lorenz template $\L$ with the inflation $\tilde{\L} \subset \L$ as identified in Figure~\ref{fig:lorenz_subtemplate}.
-Label the left and right strips of $\L$ $x_1$ and $x_2$ respectively, and the left and right strips of $\tilde{\L}$ $\tilde{x_1}, \tilde{x_2}$.
+Label the left and right strips of $\L$ as $x_1$ and $x_2$ respectively, and the left and right strips of $\tilde{\L}$ as $\tilde{x_1}$ and $\tilde{x_2}$.
 Even though $\tilde{\L} \subset \L$, $\tilde{\L} \cong \L$! To understand why Lemma~\ref{lemma:symbolic} holds, consider how the $\tilde{x_i}$ are contained in $x_i$. $\tilde{x_1} \subset x_1$ so one can easily see that
 orbits in $\L$ passing through $x_1$ will pass through $\tilde{x_1}$ under the inflation that takes $\L$ to $\tilde{\L}$. On the other hand, $\tilde{x_2} \subset x_1 \cup x_2$; orbits in $\tilde{\L}$ passing through
 $\tilde{x_2}$ will first pass through $x_1$ and then $x_2$ when pulled back along the inflation. This actually serves to prove the lemma if rewritten generally.
@@ -192,7 +191,7 @@ As a quick recap, we've established that renormalizing a template $\tau$ induces
 that the renormalization (and by extension the induced map on itineraries)  preserves the knot type of orbits. We now identify a special class of inflations that preserve knot type, as these are the inflations that we're really after.
 
 \begin{definition}
-  An \emph{isotopic inflation} of embedded templates $\tau$ and $\rho$ is a template inflation $\bm{R}: \tau \ to \rho$ such that $\bm{R}(\tau)$ is isotopic to $\rho$ (in the ambient space)
+  An \emph{isotopic inflation} of embedded templates $\tau$ and $\rho$ is a template inflation $\bm{R}: \tau \to \rho$ such that $\bm{R}(\tau)$ is isotopic to $\rho$ (in the ambient space)
 \end{definition}
 
 
