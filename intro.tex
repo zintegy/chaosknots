@@ -56,7 +56,7 @@ We do not discuss the intricacies of this construction, for details, see~\cite{b
 
 Figure~\ref{fig:lorenz} shows the template for the familiar Lorenz system, the canonical chaotic system, described in equations~\ref{eq:lorenz}-\ref{eq:lorenz3}. The simplicity of the Lorenz template is a testament to the elegance of
 templates - the Lorenz template exactly captures the repeated expanding and folding over of orbits that is the signature of chaos. For certain parameter values, periodic solutions to these equations form a link of infinitely
-many components, although we will see later that the Lorenz system is not universal.
+many components~\cite{knottyode}, although we will see later that the Lorenz system is not universal.
 
 \begin{align}
   \label{eq:lorenz}
@@ -76,7 +76,7 @@ The primary formal advantage of working with templates, is that they allow the u
     \item Strips $\set{x_i : i = 1, \cdots N \geq 2 M}$, the two-dimensional regions connecting branch lines
     \item Itinerary $(x_{s_1}x_{s_2}x_{s_3} \dots)$, a sequence of strips crossed by an orbit on $\tau$
     \item Itinerary space $\Sigma_\tau = \set{a_0 a_1 a_2 \cdots} \subset \set{x_1, x_2, \ldots, x_N}^{\Z^+}$, the set of all possible itineraries on $\tau$
-    \item Transition matrix
+    \item The transition matrix $A_\tau$
 
       \begin{equation}
         A_\tau(i,j) = \left\{ \
@@ -92,6 +92,11 @@ The primary formal advantage of working with templates, is that they allow the u
 It's interesting to note that powers of $A_\tau$ capture allowable trajectories, or more precisely the $(i,j)$th element of the $k$th power of $A_\tau$ will be $1$ iff there is an orbit of $\tau$ of length $k$.
 So in principle we have succeeded in reducing questions about the periodic orbits of a flow to questions about powers of a single matrix. Of course, in practice it will be very difficult to compute $A$ from an arbitrary
 dynamical system.
+
+Although crossing information is implicitly contained in $A_\tau$, it does not directly give us much information about the knot type of periodic orbits.
+\acom{come back to this}
+ An interesting question that we briefly consider
+in Section~\ref{sec:misc} is what information should keep track of in addition to $A_\tau$ to (relatively) easily compute the link of knots contained in a given template $\tau$.
 
 See the Figure~\ref{fig:universal} for an example of a template with labeled strips.
 
@@ -111,7 +116,7 @@ Choose an ordering $\vartriangleright$ on the branch lines:
   l_2 &: x_3 \vartriangleright x_4
 \end{align}
 
-Then a lexicographic ordering on $\sigma_\V$ gives an ordering of orbits. For example, $x_1^2 x_3 x_4 \cdots \vartriangleright x_1 x_2 x_3 x_4 \vartriangleright x_1 x_2 x_4 \cdots$.
+Then a lexicographic ordering on $\Sigma_\V$ gives an ordering of orbits. For example, $x_1^2 x_3 x_4 \cdots \vartriangleright x_1 x_2 x_3 x_4 \vartriangleright x_1 x_2 x_4 \cdots$.
 
 Although we have skirted over the details of this ordering here, rest assured that it is well-defined for all templates as confirmed in~\cite{Holmes1989}\cite{Holmes1985}\cite{knottyode}
 
@@ -147,7 +152,10 @@ we will see exactly how its usefulness is manifest.
 \begin{figure}[h]
   \centering
   \includegraphics[width=\textwidth]{lorenz_subtemplate.png}
-  \caption{A subtemplate of the Lorenz subtemplate $\L$. When it is cut along the boundary and removed from $\L$, it forms a template diffeomorphic to the original one! Figure reproduced from~\cite{knottyode}}\label{fig:lorenz_subtemplate}
+  \caption{A subtemplate of the Lorenz subtemplate $\L$. When it is cut along the boundary and removed from $\L$, it forms a template diffeomorphic to the original one!
+    Bold lines indicate the boundary of the template whereas the lighter lines are orbits. Lines are dashed where one subtemplate passes behind another. The crossings in the template boundaries on the lower figure
+    are intended to indicate twists in the strip.
+    Figure reproduced from~\cite{knottyode}}\label{fig:lorenz_subtemplate}
 \end{figure}
 
 A \emph{very} useful lemma proved in~\cite{knottyode} follows
