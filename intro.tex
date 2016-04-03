@@ -89,7 +89,9 @@ The primary formal advantage of working with templates, is that they allow the u
   \end{itemize}
 \end{definition}
 
-It's interesting to note that powers of $A_\tau$ capture allowable trajectories, or more precisely the $(i,j)$th element of the $k$th power of $A_\tau$ will be $1$ iff there is an orbit of $\tau$ of length $k$.
+It's interesting to note that powers of $A_\tau$ capture allowable trajectories, or more precisely the $(i,j)$th element of the $k$th power of $A_\tau$ will be nonzero iff there is an admissable itinerary of length
+$k$ from $x_i$ to $x_j$.
+In particular, ${(A_\tau^k)}_{i,j}$ is the number of different length $k$ orbits linking $x_i$ and $x_j$
 So in principle we have succeeded in reducing questions about the periodic orbits of a flow to questions about powers of a single matrix. Of course, in practice it will be very difficult to compute $A$ from an arbitrary
 dynamical system.
 
@@ -172,7 +174,7 @@ A \emph{very} useful lemma proved in~\cite{knottyode} follows
   If templates $\tau$ and $\rho$ have $M$ and $N$ strips, respectively, a template inflation $\bm{R}: \tau \to \rho$ induces a map $\bm{R}: \Sigma_\tau \to \Sigma_\rho$ whose action is to inflate each element of the Markov partition of strips $\set{x_i : i = 1\cdots M}$ of the template $\tau$ to a finite
   admissible word $\set{\bm{w_i} = x_{i_1} x_{i_2} \cdots x_{i_k} : i = 1 \cdots N, x_{i_j} \in \set{x_i}}$\label{lemma:symbolic}
 \end{lemma}
-%%%%%%%%%This label doesn't work. 
+%%%%%%%%%This label doesn't work.
 
 For example the inflation $\bm{L} : \L \to \L$ shown in Figure~\ref{fig:lorenz_subtemplate} (with $x_1$ (resp. $x_2$) set as the left (right) strip) has the following action on itineraries in $\L$:
 
