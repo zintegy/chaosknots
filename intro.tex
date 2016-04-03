@@ -171,18 +171,19 @@ A \emph{very} useful lemma proved in~\cite{knottyode} follows
 
 
 \begin{lemma}[Ghrist \& Holmes 1993]
-  A template inflation $\bm{R}: \tau \to \rho$ induces a map $\bm{R}: \Sigma_\tau \to \Sigma_\rho$ whose action is to inflate each element of the Markov partition of strips $\set{x_i : i = 1\cdots N}$ to a finite
-  admissible word $\set{\bm{w_i} = w_1 w_2 \cdots w_{n(i)} : i = 1 \cdots N, w_i \in \set{x_i}}$\label{lemma:symbolic}
+  If templates $\tau$ and $\rho$ have $M$ and $N$ strips, respectively, a template inflation $\bm{R}: \tau \to \rho$ induces a map $\bm{R}: \Sigma_\tau \to \Sigma_\rho$ whose action is to inflate each element of the Markov partition of strips $\set{x_i : i = 1\cdots M}$ of the template $\tau$ to a finite
+  admissible word $\set{\bm{w_i} = x_{i_1} x_{i_2} \cdots x_{i_k} : i = 1 \cdots N, x_{i_j} \in \set{x_i}}$\label{lemma:symbolic}
 \end{lemma}
+%%%%%%%%%This label doesn't work.
 
 For example the inflation $\bm{L} : \L \to \L$ shown in Figure~\ref{fig:lorenz_subtemplate} (with $x_1$ (resp. $x_2$) set as the left (right) strip) has the following action on itineraries in $\L$:
 
 \begin{equation}
-  \bm{L} : \L \to \L \left\{ \begin{matrix} & x_1 \mapsto x_1 \\ & x_2 \mapsto x_1 x_2 \end{matrix}\right.
+\bm{L} : \L \to \L  \begin{cases} x_1 \mapsto x_1 \\ x_2 \mapsto x_1 x_2 \end{cases}
 \end{equation}
 
 Consider the Lorenz template $\L$ with the inflation $\tilde{\L} \subset \L$ as identified in Figure~\ref{fig:lorenz_subtemplate}.
-Label the left and right strips of $\L$ $x_1$ and $x_2$ respectively, and the left and right strips of $\tilde{L}$ $\tilde{x_1}, \tilde{x_2}$.
+Label the left and right strips of $\L$ $x_1$ and $x_2$ respectively, and the left and right strips of $\tilde{\L}$ $\tilde{x_1}, \tilde{x_2}$.
 Even though $\tilde{\L} \subset \L$, $\tilde{\L} \cong \L$! To understand why Lemma~\ref{lemma:symbolic} holds, consider how the $\tilde{x_i}$ are contained in $x_i$. $\tilde{x_1} \subset x_1$ so one can easily see that
 orbits in $\L$ passing through $x_1$ will pass through $\tilde{x_1}$ under the inflation that takes $\L$ to $\tilde{\L}$. On the other hand, $\tilde{x_2} \subset x_1 \cup x_2$; orbits in $\tilde{\L}$ passing through
 $\tilde{x_2}$ will first pass through $x_1$ and then $x_2$ when pulled back along the inflation. This actually serves to prove the lemma if rewritten generally.
@@ -190,7 +191,7 @@ $\tilde{x_2}$ will first pass through $x_1$ and then $x_2$ when pulled back alon
 As a quick recap, we've established that renormalizing a template $\tau$ induces a map on the itineraries $\Sigma_\tau$ of $\tau$ that preserves the \emph{dynamics} of $\tau$. However we have \emph{not} yet established
 that the renormalization (and by extension the induced map on itineraries)  preserves the knot type of orbits. We now identify a special class of inflations that preserve knot type, as these are the inflations that we're really after.
 
-\begin{definition}{Isotopic inflation}
+\begin{definition}
   An \emph{isotopic inflation} of embedded templates $\tau$ and $\rho$ is a template inflation $\bm{R}: \tau \ to \rho$ such that $\bm{R}(\tau)$ is isotopic to $\rho$ (in the ambient space)
 \end{definition}
 
