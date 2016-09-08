@@ -1,2 +1,1 @@
-# chaos-knots
-Working directory for knot theory project... 
+Compile paper.tex to view the entire paper. 
